@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="py-8 px-8">
-      <h1 className="text-black font-bold text-[40px] text-center">CONTACT</h1>
+    <div className="py-8 px-10 md:px-20">
+      <h1 className="text-black font-extrabold text-[38px] text-center md:text-[55px]">CONTACT</h1>
       <div className="flex flex-col gap-4">
         <p>
           Pour obtenir un devis pour votre mariage, veuillez visiter cette page

@@ -11,6 +11,9 @@ import Formules from "./Components/Formules";
 import Photos from "./Components/Photos";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import Articles from "./Components/Articles";
+import Mariage from "./Components/Mariage";
+import Entreprise from "./Components/Entreprise";
 
 function App() {
   const [showCookies, setShowCookies] = useState(true);
@@ -25,8 +28,12 @@ function App() {
       <Festive/>
       <Somptueux/>
       <Formules/>
+      <Mariage/>
+      <Entreprise/>
       <Photos/>
+      <Articles/>
       <Contact/>
+      
       <Footer/>
     </div>
   );

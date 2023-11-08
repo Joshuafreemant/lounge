@@ -9,6 +9,8 @@
 body{
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
+
 }
 .cookies-hidden {
   opacity: 0;
@@ -33,4 +35,20 @@ body{
   min-width: 100%;
   object-fit: cover;
   vertical-align: bottom;
+}
+.swiper{
+  overflow-y: hidden !important;
+  height: 40vh !important;
+  padding: 10px 0px;
+
+}
+.swiper-pagination{
+  bottom: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-pagination-bullet-active{
+  background-color: black !important;
+  padding: 7px;
 }

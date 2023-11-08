@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 
-const PhotoGallery = ({ props, full }) => {
+const PhotoGrid = ({ props, full }) => {
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
       gallery: "#" + "my-test-gallery",
@@ -18,7 +18,7 @@ const PhotoGallery = ({ props, full }) => {
   }, []);
   return (
     <div
-      className="pswp-gallery flex flex-wrap justify-between gap-2 "
+      className="pswp-gallery grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-3 "
       id="my-test-gallery"
     >
       {props.map((image, index) => (
@@ -29,26 +29,21 @@ const PhotoGallery = ({ props, full }) => {
           key={"my-test-gallery" + "-" + index}
           target="_blank"
           rel="noreferrer"
-          className={
-            full
-              ? "md:h-[20px] h-[140px] flex-grow w-[48.5%]  overflow-hidden rounded-md"
-              : "flex-grow w-[48.5%] md:h-[180px] h-[120px] overflow-hidden rounded-md"
+          className={ "md:h-[170px] rounded-md overflow-hidden"
           }
         >
-          {image?.src.length > 1 ? (
+          
             <img
               src={image.src}
               alt=""
               width={image.width}
               className={full ? "w-full h-full" : "h-full"}
             />
-          ) : (
-            ""
-          )}
+          
         </a>
       ))}
     </div>
   );
 };
 
-export default PhotoGallery;
+export default PhotoGrid;

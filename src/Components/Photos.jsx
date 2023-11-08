@@ -1,5 +1,6 @@
 import React from "react";
 import PhotoGallery from "./PhotoGallery";
+import PhotoGrid from "./PhotoGrid";
 const Photos = () => {
   const images = [
     {
@@ -84,6 +85,28 @@ const Photos = () => {
         width: 320,
         height: 174,
       },
+
+      {
+        src: "/IMG_20180505_164649-scaled.png",
+        width: 320,
+        height: 174,
+      },
+
+      {
+        src: "/IMG_20180430_184126-scaled.png",
+        width: 320,
+        height: 174,
+      },
+      {
+        src: "/IMG_20180430_184212-scaled.png",
+        width: 320,
+        height: 174,
+      },
+      {
+        src: "/prestation.png",
+        width: 320,
+        height: 174,
+      }
       
       
     
@@ -93,14 +116,14 @@ const Photos = () => {
       <div className="relative h-[50vh] md:h-screen w-full bg-photos bg-cover bg-center p-6">
         <div class="absolute inset-0 bg-black bg-opacity-30">
           <div className="px-8  flex justify-center items-center h-full">
-            <h1 className="text-white font-bold text-[40px] uppercase">
+            <h1 className="text-white font-extrabold text-[40px] uppercase">
               Photos
             </h1>
           </div>
         </div>
       </div>
-      <div className="px-8 mt-12">
-        <PhotoGallery props={images} />
+      <div className="px-8 mt-12 md:px-24">
+        <PhotoGrid props={images} />
       </div>
     </div>
   );
