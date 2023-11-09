@@ -23,7 +23,7 @@ const Header = ({ isOpen, setIsOpen }) => {
     setIsOpen(!isOpen);
   };
 
-  return (
+  return ( 
     <>
       <div className="bg-[#ba1410] w-full h-8 items-center px-20 hidden md:flex gap-6 fixed top-0">
         <div className="flex gap-2 items-center my-6">
