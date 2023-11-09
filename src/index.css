@@ -69,7 +69,7 @@ body{
   width: 70%; /* Adjust the width as needed */
 }
 .move{
-  transform: translateX(-280px);
+  transform: translateX(-265px);
 }
 .content{
   transition: width 0.2s ease-in;
