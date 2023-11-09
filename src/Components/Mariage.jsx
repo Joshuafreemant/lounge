@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import PhotoGallery from "./PhotoGallery";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Mariage = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const images = [
     {
       src: "/ceremonie-mariage-1.png",
@@ -23,7 +28,13 @@ const Mariage = () => {
 
   return (
     <div className="p-8 my-8 md:flex md:px-20 lg:px-32 items-center md:gap-4">
-      <div className="bg-white rounded-md shadow-element md:w-7/12 w-full text-center md:py-20 md:px-20 py-5 flex flex-col items-center justify-center">
+      <div
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="500"
+        data-aos-anchor-placement="bottom-bottom"
+        className="bg-white rounded-md shadow-element md:w-7/12 w-full text-center md:py-20 md:px-20 py-5 flex flex-col items-center justify-center"
+      >
         <h2 className=" font-kristi text-[45px] font-medium text-[#F07D00]">
           Pour VOTRE
         </h2>
@@ -43,7 +54,7 @@ const Mariage = () => {
         </span>
       </div>
       <div className="md:w-5/12">
-        <PhotoGallery props={images}  />
+        <PhotoGallery props={images} />
       </div>
     </div>
   );

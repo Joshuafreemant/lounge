@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import PhotoGallery from "./PhotoGallery";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const LifeStyle = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const images = [
     {
       src: "/piste.png",
@@ -68,7 +73,13 @@ const LifeStyle = () => {
         Didier Chane Si Ken​
       </h2>
       <div className="md:flex md:flex-row-reverse items-center md:px-12 lg:px-32 ">
-        <div className="bg-white shadow-element md:px-20 md:w-7/12 w-full text-center md:py-12 py-5 flex flex-col items-center justify-center">
+        <div
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+          data-aos-anchor-placement="bottom-bottom"
+          className="bg-white shadow-element md:px-20 md:w-7/12 w-full text-center md:py-8 py-5 flex flex-col items-center justify-center"
+        >
           <h2 className=" font-kristi text-[45px] font-medium text-[#F07D00]">
             Pensé pour
           </h2>
@@ -87,13 +98,20 @@ const LifeStyle = () => {
             En savoir plus
           </span>
         </div>
+
         <div className="md:w-5/12">
           <PhotoGallery props={images} />
         </div>
       </div>
 
       <div className="my-8 md:flex md:flex-row items-center md:px-12 lg:px-16 md:my-20 gap-20">
-        <div className="md:w-6/12 bg-white shadow-element w-full text-center py-5 flex flex-col items-center justify-center">
+        <div
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+          data-aos-anchor-placement="bottom-bottom"
+          className="md:w-6/12 bg-white shadow-element w-full text-center md:py-8 py-5 flex flex-col items-center justify-center"
+        >
           <h2 className=" font-kristi text-[45px] font-medium text-[#F07D00] md:text-[50px] lg:text-[55px]">
             20 BONNES RAISONS
           </h2>

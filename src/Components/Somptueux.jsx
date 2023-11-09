@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PhotoGallery from "./PhotoGallery";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Somptueux = () => {
   const imagesTwo = [
     {
@@ -27,14 +28,11 @@ const Somptueux = () => {
       width: 320,
       height: 174,
     },
-    // {
-    //     src: "",
-    //     original: "/espace.png",
-    //     width: 310,
-    //     height: 160,
-    //   },
+   
   ];
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="p-8 bg-white">
       <div className="my-8 md:flex md:px-20 lg:px-32 items-center">
@@ -42,7 +40,12 @@ const Somptueux = () => {
           <PhotoGallery props={imagesTwo} />
         </div>
 
-        <div className="bg-[#4e3a33] md:w-7/12 md:py-20 w-full text-center py-5 flex flex-col items-center justify-center">
+        <div 
+         data-aos="fade-up"
+         data-aos-easing="linear"
+         data-aos-duration="500"
+         data-aos-anchor-placement="bottom-bottom"
+        className="bg-[#4e3a33] rounded-md md:w-7/12 md:py-20 w-full text-center py-5 flex flex-col items-center justify-center">
           <h2 className=" font-kristi text-[45px] font-medium text-[#F07D00]">
             UN ESPACE
           </h2>

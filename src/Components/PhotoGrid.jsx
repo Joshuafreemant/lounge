@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
+import Zoom from "react-reveal/Zoom";
 
 const PhotoGrid = ({ props, full }) => {
   useEffect(() => {
@@ -17,6 +18,8 @@ const PhotoGrid = ({ props, full }) => {
     };
   }, []);
   return (
+    <Zoom bottom opposite>
+
     <div
       className="pswp-gallery grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-3 "
       id="my-test-gallery"
@@ -29,7 +32,7 @@ const PhotoGrid = ({ props, full }) => {
           key={"my-test-gallery" + "-" + index}
           target="_blank"
           rel="noreferrer"
-          className={ "md:h-[170px] rounded-md overflow-hidden"
+          className={ "md:h-[175px] rounded-md overflow-hidden"
           }
         >
           
@@ -43,6 +46,7 @@ const PhotoGrid = ({ props, full }) => {
         </a>
       ))}
     </div>
+    </Zoom>
   );
 };
 

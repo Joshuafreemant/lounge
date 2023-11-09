@@ -122,7 +122,7 @@ const Photos = () => {
           </div>
         </div>
       </div>
-      <div className="px-8 mt-12 md:px-24">
+      <div className="px-8 mt-12 md:px-28">
         <PhotoGrid props={images} />
       </div>
     </div>

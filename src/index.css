@@ -52,3 +52,61 @@ body{
   background-color: black !important;
   padding: 7px;
 }
+/* Sidebar.css */
+.sidebar {
+  width: 0;
+  height: 100vh;
+  background-color: black;
+  transition: width 0.3s ease-out;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.sidebar.open {
+  z-index: 100;
+  width: 70%; /* Adjust the width as needed */
+}
+.move{
+  transform: translateX(-280px);
+}
+.content{
+  transition: width 0.2s ease-in;
+
+}
+.bg-gradients{
+  background-image: (rgba(0,0,0,.5) 0%,rgba(0,0,0,.4) 10%,rgba(0,0,0,.3) 35%,transparent 97%,transparent 0%);
+}
+.hover-element:hover .show{
+    opacity: 1;
+    background: #000;
+    width: 220px;
+    height: auto;
+    transition: width 0.2s ease-in;
+  
+}
+.hover-element{
+  padding: 20px;
+}
+.show{
+  opacity: 0;
+  transition: width 0.2s ease-in;
+  top: 60px;
+  left: -20px;
+
+}
+.reveal {
+  
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: width 0.2s ease-in;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: width 0.2s ease-in;
+
+}
+

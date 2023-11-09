@@ -14,28 +14,32 @@ import Footer from "./Components/Footer";
 import Articles from "./Components/Articles";
 import Mariage from "./Components/Mariage";
 import Entreprise from "./Components/Entreprise";
+import SideBar from "./Components/SideBar";
 
 function App() {
   const [showCookies, setShowCookies] = useState(true);
-
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="relative">
-      <Banner />
-      {showCookies && (
-        <Cookies showCookies={showCookies} setShowCookies={setShowCookies} />
-      )}
-      <LifeStyle/>
-      <Festive/>
-      <Somptueux/>
-      <Formules/>
-      <Mariage/>
-      <Entreprise/>
-      <Photos/>
-      <Articles/>
-      <Contact/>
-      
-      <Footer/>
-    </div>
+    <>
+      <SideBar setIsOpen={setIsOpen} isOpen={isOpen} />
+      <div className={`content ${isOpen ? "content move relative" : "relative"}`}>
+        <Banner setIsOpen={setIsOpen} isOpen={isOpen} />
+        {/* {showCookies && (
+          <Cookies showCookies={showCookies} setShowCookies={setShowCookies} />
+        )} */}
+        <LifeStyle />
+        <Festive />
+        <Somptueux />
+        <Formules />
+        <Mariage />
+        <Entreprise />
+        <Photos />
+        <Articles />
+        <Contact />
+
+        <Footer />
+      </div>
+    </>
   );
 }
 
