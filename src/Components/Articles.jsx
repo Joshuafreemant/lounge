@@ -21,7 +21,7 @@ import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
 
 import { Autoplay, Navigation } from "swiper";
 
-SwiperCore.use([EffectCoverflow, Pagination, Autoplay]);
+SwiperCore.use([EffectCoverflow, Pagination, Autoplay,Navigation]);
 
 const slide_img = [
   {
@@ -80,7 +80,8 @@ const Articles = () => {
           slideShadows: false,
         }}
         autoplay
-        pagination={true}
+        pagination={{ clickable: true }}
+        navigation={true}
         className="mySwiper swipper block "
       >
         {slide_img.map((text, i) => {
