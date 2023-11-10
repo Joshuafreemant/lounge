@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 
 const Banner = ({isOpen,setIsOpen}) => {
+  
   return (
     <div className="relative h-[68vh] md:h-screen w-full bg-background bg-cover bg-center">
       <div class="absolute inset-0 bg-black bg-opacity-20">

@@ -6,9 +6,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
   const [showMain, setShowMain] = useState(true);
   const [showSecond, setShowSecond] = useState(false);
   const [showThird, setShowThird] = useState(false);
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+ 
   const toggleArrow = () => {
     setShowSecond(!showSecond);
     setShowMain(false);
@@ -23,10 +21,11 @@ const SideBar = ({ isOpen, setIsOpen }) => {
     setShowMain(true);
   };
   return (
-    <div className="flex ">
-      {/* <div onClick={toggleSidebar} className="w-[30%] bg-white h-screen ">u</div> */}
-      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+    <div className="flex">
+      <div className={`flex relative md:hidden sidebar ${isOpen ? "open" : ""}`}>
+        <div onClick={()=>setIsOpen(false)} className="bg-transparent absolute w-40 h-screen -left-40"></div>
         {showMain && (
+
           <ul className="flex flex-col mt-20 pl-6 pr-3 gap-3">
             <li className="text-white text-[22px] font-extrabold">Accuell</li>
             <li className="text-white text-[22px] font-extrabold">
