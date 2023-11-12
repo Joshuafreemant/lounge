@@ -12,7 +12,7 @@ const PhotoGrid = ({ props, full }) => {
     });
     lightbox.init();
 
-    return () => {
+    return () => { 
       lightbox.destroy();
       lightbox = null;
     };
