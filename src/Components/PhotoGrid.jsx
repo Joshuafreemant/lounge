@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
-import Zoom from "react-reveal/Zoom";
+import {Zoom} from "react-awesome-reveal";
 
 const PhotoGrid = ({ props, full }) => {
   useEffect(() => {
